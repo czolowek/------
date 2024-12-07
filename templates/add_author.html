@@ -3,13 +3,13 @@
 {% block center %}
 <form action="{{ url_for('add_author') }}" method="post">
     <div class="form-group">
-        <label>Ім'я та прізвище автора</label>
+        <label>введить назву пицци</label>
         <input type="text" name="name" class="form-control">
     </div>
     <div class="form-group">
-        <label>Місто проживання</label>
+        <label>iнгридиенти</label>
         <input type="text" name="country" class="form-control">
     </div>
-    <button type="submit" class="btn btn-primary">Додати автора</button>
+    <button type="submit" class="btn btn-primary">додати пиццу</button>
 </form>
 {% endblock center %}
