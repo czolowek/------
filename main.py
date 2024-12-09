@@ -15,7 +15,7 @@ def index():
         return render_template("index.html", posts=posts)
 
 
-@app.route("/add_post/", methods=["GET", "POST"])
+@app.route("/add_restoraunt/", methods=["GET", "POST"])
 def add_post():
 
     if request.method == "POST":
@@ -26,17 +26,17 @@ def add_post():
         return redirect(url_for("index"))
 
     authors = db_action.get_authors()
-    return render_template("add_post.html", authors=authors)
+    return render_template("add_restoraunt.html", authors=authors)
 
 
-@app.route("/add_author/", methods=["GET", "POST"])
+@app.route("/add_pizza/", methods=["GET", "POST"])
 def add_author():
     if request.method == "POST":
         name = request.form.get("name")
         country = request.form.get("country")
         db_action.add_author(name=name, country=country)
 
-    return render_template("add_author.html")
+    return render_template("add_pizza.html")
 
 
 if __name__ == "__main__":
